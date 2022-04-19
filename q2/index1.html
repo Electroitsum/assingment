@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-cont{
+            display: grid;
+            gap: 5px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 30px 300px 1fr 100px;
+            min-height: 100vh;
+            text-align: center;
+            font-size: 14PX;
+            font-family: 'Poppins', sans-serif;
+        }
+        .nav-bar{
+            grid-column-start: 1;
+            grid-column-end: 5;
+            height: 30px;
+            background-color: #a7ffeb;
+        }
+        .col-side-bar{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row: 2/5;
+            background-color: #18ffff;
+        }
+        .col-main-data{
+            grid-column: 2/5;
+            background-color: #84ffff;
+        }
+        .col-content1{
+            grid-column: 2/3;
+            background-color: #6fffd2;
+        }
+        .col-content2{
+            grid-column: 3/4;
+            background-color: #64ffda;
+        }
+        .col-content3{
+            grid-column: 4/5;
+            background-color: #73ffba;
+        }
+        .col-footer{
+            grid-column: 2/5;
+            background-color: #1de9b6;
+        }
+
+        @media screen and (max-width: 480px) {
+            .main-cont{
+                grid-template-rows: 30px 30px 400px repeat(3, 200px) 150px;
+            }
+            [class*="col-"]{
+                grid-column: 1/5;
+            }
+            .col-side-bar{
+                grid-row: 2/3;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="main-cont">
+            <div class="nav-bar">NAVBAR</div>
+            <div class="col-side-bar">SIDEBAR</div>
+            <div class="col-main-data">MAIN</div>
+            <div class="col-content1">CONTENT1</div>
+            <div class="col-content2">CONTENT2</div>
+            <div class="col-content3">CONTENT3</div>
+            <div class="col-footer">FOOTER</div>
+
+        </div>
+    </main>
+    <footer></footer>
+    
+</body>
+</html>

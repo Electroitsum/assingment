@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>form</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --primary: rgb(23, 23, 38);
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .main-cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: calc(100vh - 60px);
+        background-color: var(--primary);
+      }
+      .form-cont {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        flex-direction: column;
+        border-radius: 10px;
+        border: 2px solid white;
+        background-color: white;
+        margin: 20px;
+        max-width: 600px;
+      }
+      .frm-head {
+        font-weight: 600;
+        margin-bottom: 30px;
+      }
+      .frm-main {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      .frm-inner {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* width: 250px; */
+        font-size: 16px;
+        padding: 10px;
+      }
+      
+
+      .frm-row {
+        flex: 50%;
+        padding: 10px;
+      }
+
+      input {
+        width: 100%;
+        font-size: 16px;
+        padding: 8px;
+        border: 1px solid #f2f2f2;
+        outline: none;
+        margin: 4px 0;
+        border-radius: 10px;
+      }
+      label {
+        color: #4c4c4c;
+      }
+      #Birthday {
+        width: 60%;
+      }
+      #date:hover {
+        cursor: pointer;
+      }
+      .submit-cont {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 20px;
+        width: 100%;
+      }
+      .submit-btn {
+        float: left;
+        font-size: 16px;
+        height: 42px;
+        width: 100px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        background-color: var(--primary);
+        color: white;
+      }
+      .submit-btn:hover {
+        cursor: pointer;
+        background-color: black;
+        transition: 0.5s;
+      }
+      .foot-cont {
+        display: flex;
+        width: 100%;
+        min-height: 60px;
+        padding: 10px 20px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .foot-nav-main {
+        list-style: none;
+        display: flex;
+      }
+      .foot-nav-main li {
+        display: inline-block;
+        font-size: 14px;
+      }
+      .foot-nav-main li a {
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+      }
+      .foot-right p {
+        font-size: 12px;
+      }
+      .foot-right h2 {
+        font-size: 21px;
+      }
+
+      @media screen and (max-width: 480px) {
+        .frm-row {
+          flex: 100%;
+        }
+        .foot-nav-main {
+          margin-left: 20px;
+        }
+        .foot-nav-main li a {
+          padding: 5px;
+        }
+        .submit-cont {
+          justify-content: center;
+        }
+        .birthday-wraper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        #Birthday {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="main-cont">
+        <span class="form-cont">
+          <h1 class="frm-head">Get Started</h1>
+
+          <form action="#" class="frm-main">
+            <span class="frm-inner">
+              <div class="frm-row">
+                <label for="name">Name</label><br />
+                <input type="text" id="name" /><br />
+              </div>
+              <div class="frm-row">
+                <label for="Email">Email</label><br />
+                <input type="text" id="Email" /><br />
+              </div>
+              <div class="frm-row">
+                <label for="Password">Password</label><br />
+                <input type="text" id="Password" /><br />
+              </div>
+              <div class="frm-row">
+                <label for="Confirm Password">Confirm Password</label><br />
+                <input type="text" id="Confirm Password" /><br />
+              </div>
+              <div class="frm-row">
+                <label for="Phone">Phone</label><br />
+                <input type="text" id="Phone" /><br />
+              </div>
+              <div class="frm-row">
+                <label for="Address">Address</label><br />
+                <input type="text" id="Address" /><br />
+              </div>
+              <div class="frm-row">
+                <label for="City">City</label><br />
+                <input type="text" id="City" /><br />
+              </div>
+              <div class="frm-row">
+                <label for="State">State</label><br />
+                <input type="text" id="State" /><br />
+              </div>
+              <div class="frm-row">
+                <label for="Country">Country</label><br />
+                <input type="text" id="Country" /><br />
+              </div>
+              <div class="frm-row birthday-wraper">
+                <span>
+                  <label for="Birthday">Birthday</label><br />
+                  <input type="date" id="Birthday" /><br
+                /></span>
+              </div>
+            </span>
+          </form>
+          <div class="submit-cont">
+            <button class="submit-btn">Submit</button>
+          </div>
+        </span>
+      </div>
+    </main>
+    <footer>
+      <div class="foot-cont">
+        <span class="foot-right">
+          <h2>Test Assignment</h2>
+          <p>
+            This was the test to verify your html and css skills and the way you
+            implemented the design provided
+          </p>
+        </span>
+        <span>
+          <ul class="foot-nav-main">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
